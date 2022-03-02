@@ -1,0 +1,7 @@
+#cloud-config
+
+packages: ['nfs-utils']
+
+# Note the directory doesn't need to exist beforehand:
+mounts:
+  - ["10.60.102.172:/home", "/mnt/cluster_home", "nfs4", "defaults", "0", "0"]
